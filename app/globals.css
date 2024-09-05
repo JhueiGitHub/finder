@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@font-face {
+  font-family: "ExemplarPro";
+  src: url("/fonts/ExemplarPro.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Dank";
+  src: url("/fonts/DankMono-Italic.ttf") format("truetype");
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+}
+
+.sidebar h2 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.sidebar .folder {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.sidebar .folder img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.sidebar .folder span {
+  color: #d1d5db;
+  font-size: 0.875rem;
+  flex-grow: 1;
+}
+
+.sidebar .folder button {
+  margin-left: auto;
+  color: #6b7280;
+}
+
+.sidebar .folder button:hover {
+  color: #ef4444;
+}
